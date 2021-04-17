@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+}
+
+.grid-container > * {
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+.header {
+  grid-area: header;
+  padding-left: 100px;
+}
+
+.navbar {
+  grid-area: navbar;
+  background-image: url("images/pattern_bg.png");
+}
+.navbar-text {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: #f5f5f5;
+}
+.row-button {
+  padding-top: 80px;
+  padding-left: 255px;
+}
+.view-button {
+  border: none;
+  height: 55px;
+  width: 180px;
+  color: red;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 18px;
+  font-family: "Questrial", sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #f7f7f7;
+}
+
+.main {
+  grid-area: main;
+  background-color: #f5f5f5;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-align: left;
+  padding-left: 18px;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.grid-container {
+  display: grid;
+  gap: 1px;
+  grid-template:
+    "header" 80px
+    "navbar" 350px
+    "main" 360px
+    "sidebar" 360px
+    "footer" 100px;
+}
+.container-item {
+  overflow: hidden;
+}
+
+.item {
+  float: left;
+}
+#item1 {
+  background-color: rgb(231, 49, 49);
+  width: 50px;
+  height: 50px;
+}
+#item2 {
+  background-color: rgb(231, 49, 49);
+  margin-left: 10px;
+  width: 50px;
+  height: 50px;
+}
+.form {
+  padding: 40px 0;
+  box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+.form .grupo {
+  position: relative;
+  margin: 45px;
+}
+.button-enviar {
+  border: none;
+  height: 55px;
+  width: 180px;
+  color: rgb(255, 255, 255);
+  background-color: red;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 18px;
+  font-family: "Questrial", sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+}
+::placeholder {
+  color: rgb(165, 161, 161);
+  opacity: 1;
+  padding-left: 10px;
+  font-size: 18px;
+}
+.button-class {
+  padding-left: 300px;
+}
+label.error {
+  color: red;
+  font-size: 1rem;
+  display: block;
+  margin-top: 5px;
+}
+
+input.error {
+  border: 1px dashed red;
+  font-weight: 300;
+  color: red;
+}
+
+@media (min-width: 464px) {
+  .row-button {
+    padding-top: 85px;
+    padding-left: 295px;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template:
+      "header  header" 80px
+      "navbar  navbar" 250px
+      "main sidebar" auto
+      "footer  footer" 100px /
+      50% 50%;
+  }
+  .row-button {
+    padding-top: 30px;
+    padding-left: 5px;
+  }
+  .button-class {
+    padding-left: 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template:
+      "header  header" 80px
+      "navbar  navbar " 250px
+      "main    sidebar" auto
+      "footer   footer" 100px /
+      50% 50%;
+  }
+  .row-button {
+    padding-top: 50px;
+  }
+  .main {
+    grid-area: main;
+    background-color: #f5f5f5;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    text-align: left;
+    padding-left: 200px;
+  }
+  .button-class {
+    padding-left: 320px;
+  }
+}
